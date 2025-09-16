@@ -2,13 +2,13 @@ import json
 import requests
 
 # If you have a Google Places API key, enter it here
-api_key = 'AIzaSyBtIk8oI03aB6aYkhIvhZI6qhsJLlKjdTQ'
+api_key = '........'
 
 # set the service url regular part
-serviceurl = 'https://maps.googleapis.com/maps/api/geocode/json?address='
+serviceurl = '...................'
 
 # specify the address
-address = '370%20Business%20Building%20Stillwater%20OK%2074078'
+address = '.............'
 
 # get the full url by putting all the string together
 requrl = serviceurl+address+'&key='+api_key
@@ -35,5 +35,6 @@ county=''
 for i in range(0,len(addresscomponentslist)):
     if addresscomponentslist[i]['types'][0] == 'administrative_area_level_2':
         county = addresscomponentslist[i]['long_name']
+
 
 print(county)
